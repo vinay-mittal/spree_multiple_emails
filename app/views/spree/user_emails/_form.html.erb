@@ -1,0 +1,8 @@
+<%= form_for @user_email, remote: true do |f| %>
+  <%= f.field_container :email, class: ["form-group"] do %>
+    <%= f.label :email, class: "form-title" %>
+    <%= f.email_field :email, class: "form-title" %>
+    <%= f.error_message_on :email %>
+  <% end %>
+  <%= f.submit %>
+<% end %>

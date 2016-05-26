@@ -1,0 +1,33 @@
+<div data-hook="account_my_emails">
+  <h3><%= Spree.t(:my_emails) %></h3>
+  <% if @my_emails.present? %>
+    <table class="table table-striped my_emails">
+      <thead class="active">
+      <tr>
+        <th class="user_email"><%= Spree.t(:email) %></th>
+        <th class="user_email_primary text-center"><%= Spree.t(:primary) %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @my_emails.each do |email| %>
+        <tr>
+          <td class="text-left"><%= email.email %></td>
+          <td class="text-center">
+            <% if email.primary? %>
+              Primary
+            <% else %>
+              <%#= link_to "Make Primary", nil, data: { confirm: "Please confirm" } %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <div class="alert alert-info"><%= Spree.t(:you_have_no_emails_yet) %></div>
+  <% end %>
+  <div>
+    <%= link_to "Add new email", new_user_email_path(user_id: @user.id), remote: true, class: "btn btn-primary" %>
+  </div>
+  <div data-hook="user_email_form"></div>
+</div>
