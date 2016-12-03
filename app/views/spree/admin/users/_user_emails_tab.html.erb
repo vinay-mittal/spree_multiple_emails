@@ -1,0 +1,3 @@
+<li<%== ' class="active"' if current == :emails %>>
+  <%= link_to_with_icon 'envelope', Spree.t(:"admin.user.emails"), spree.admin_user_user_emails_path(@user) %>
+</li>
