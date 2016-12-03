@@ -1,0 +1,14 @@
+<tr data-id=<%= user_email.id %>>
+  <td class="text-left" data-hook="email_content"><%= user_email.email %></td>
+  <td class="text-center">
+    <% if user_email.primary? %>
+      Primary
+    <% else %>
+      <%#= link_to "Make Primary", nil, data: { confirm: "Please confirm" } %>
+    <% end %>
+  </td>
+  <td class="text-center">
+    <%= link_to "Edit", edit_user_email_path(user_email), data: { remote: true }, class: "btn btn-xs btn-default" %>
+    <%= link_to "Remove", user_email, method: :delete, data: { remote: true }, class: "btn btn-xs btn-danger" %>
+  </td>
+</tr>

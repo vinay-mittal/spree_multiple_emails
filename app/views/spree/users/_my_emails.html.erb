@@ -6,21 +6,11 @@
       <tr>
         <th class="user_email"><%= Spree.t(:email) %></th>
         <th class="user_email_primary text-center"><%= Spree.t(:primary) %></th>
+        <th class="user_email_actions"></th>
       </tr>
       </thead>
-      <tbody>
-      <% @my_emails.each do |email| %>
-        <tr>
-          <td class="text-left"><%= email.email %></td>
-          <td class="text-center">
-            <% if email.primary? %>
-              Primary
-            <% else %>
-              <%#= link_to "Make Primary", nil, data: { confirm: "Please confirm" } %>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
+      <tbody id="user_emails">
+        <%= render @my_emails %>
       </tbody>
     </table>
   <% else %>
