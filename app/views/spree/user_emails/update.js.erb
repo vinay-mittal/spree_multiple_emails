@@ -1,3 +1,3 @@
 $("[data-id='<%= @user_email.id %>']").find("[data-hook='email_content']").html('<%= j @user_email.email %>');
 $("[data-hook='user_email_form']").html("");
-window.show_flash('success', '<%= flash.now[:success] %>');
+<%= render partial: "spree/shared/flash_message" %>

@@ -5,7 +5,7 @@ Spree::UsersController.class_eval do
   private
 
     def assign_user_emails
-      @my_emails = @user.emails
+      @user_emails = @user.emails
     end
 
 end

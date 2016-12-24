@@ -1,0 +1,5 @@
+<% if flash[:success].present? %>
+  show_flash("success", "<%= flash.discard(:success) %>")
+<% elsif flash[:error].present? %>
+  show_flash("error", "<%= flash.discard(:error) %>")
+<% end %>

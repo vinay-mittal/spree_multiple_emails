@@ -1,0 +1,4 @@
+<% if @user_email.primary? %>
+  $("#user_emails").html("<%= j render @user_email.user.emails %>");
+<% end %>
+<%= render partial: "spree/shared/flash_message" %>

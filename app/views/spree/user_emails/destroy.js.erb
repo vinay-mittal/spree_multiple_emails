@@ -1,6 +1,4 @@
 <% if @user_email.destroyed? %>
   $("[data-id='<%= @user_email.id %>']").remove();
-  window.show_flash('success', '<%= flash.now[:success] %>');
-<% else %>
-  window.show_flash('error', '<%= flash.now[:error] %>');
 <% end %>
+<%= render partial: "spree/shared/flash_message" %>
