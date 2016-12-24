@@ -3,7 +3,7 @@
 
 show_flash = function(type, message) {
   var flash_div = $('.flash.' + type);
-  if (flash_div.length == 0) {
+  if (flash_div.length === 0) {
     flash_div = $('<div class="alert alert-' + type + '" />');
     $('#content').prepend(flash_div);
   }
