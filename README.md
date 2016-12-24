@@ -2,8 +2,8 @@ SpreeMultipleEmails
 ===================
 
 [![Code Climate](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/badges/gpa.svg)](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails)
-[![Test Coverage](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/badges/coverage.svg)](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/coverage)
 [![Issue Count](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/badges/issue_count.svg)](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails)
+[![Test Coverage](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/badges/coverage.svg)](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/coverage)
 
 Introduction goes here.
 
