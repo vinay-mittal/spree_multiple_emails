@@ -1,0 +1,13 @@
+<% content_for :page_title do %>
+  <%= link_to @user.email, edit_admin_user_url(@user) %> / <%= Spree.t(:new_user_email) %>
+<% end %>
+
+<%= render partial: 'spree/admin/users/sidebar', locals: { current: :emails } %>
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @user_email } %>
+
+<%= form_for [:admin, @user, @user_email], url: collection_url do |f| %>
+  <fieldset>
+    <%= render partial: 'form', locals: { f: f } %>
+    <%= render partial: 'spree/admin/shared/new_resource_links' %>
+  </fieldset>
+<% end %>

@@ -1,26 +1,19 @@
-<div data-hook="account_my_emails">
+<div data-hook="account_user_emails">
   <h3><%= Spree.t(:my_emails) %></h3>
-  <% if @my_emails.present? %>
-    <table class="table table-striped my_emails">
+  <% if @user_emails.present? %>
+    <table class="table table-striped user_emails">
       <thead class="active">
       <tr>
         <th class="user_email"><%= Spree.t(:email) %></th>
         <th class="user_email_primary text-center"><%= Spree.t(:primary) %></th>
+        <% if Spree::Auth::Config[:confirmable] %>
+          <th class="user_email_primary text-center"><%= Spree.t(:verified) %></th>
+        <% end %>
+        <th class="user_email_actions"></th>
       </tr>
       </thead>
-      <tbody>
-      <% @my_emails.each do |email| %>
-        <tr>
-          <td class="text-left"><%= email.email %></td>
-          <td class="text-center">
-            <% if email.primary? %>
-              Primary
-            <% else %>
-              <%#= link_to "Make Primary", nil, data: { confirm: "Please confirm" } %>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
+      <tbody id="user_emails">
+        <%= render @user_emails %>
       </tbody>
     </table>
   <% else %>

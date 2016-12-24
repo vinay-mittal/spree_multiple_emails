@@ -36,4 +36,4 @@ Simply add this require statement to your spec_helper:
 require 'spree_multiple_emails/factories'
 ```
 
-Copyright (c) 2016 [name of extension creator], released under the New BSD License
+Copyright (c) 2016 [Vinay Mittal], released under the New BSD License

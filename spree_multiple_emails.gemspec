@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 2.0.0'
 
-  s.author    = 'Vinay'
-  s.email     = 'vinay@vinsol.com'
+  s.author    = 'Vinay Mittal'
+  s.email     = 'vinaymittal95@gmail.com'
   # s.homepage  = 'http://www.spreecommerce.com'
 
   #s.files       = `git ls-files`.split("\n")

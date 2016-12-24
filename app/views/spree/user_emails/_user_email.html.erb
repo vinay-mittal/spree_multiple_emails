@@ -1,0 +1,25 @@
+<tr data-id=<%= user_email.id %>>
+  <td class="text-left" data-hook="email_content"><%= user_email.email %></td>
+  <td class="text-center">
+    <% if user_email.primary? %>
+      <span class="label label-success"><%= Spree.t(:primary) %></span>
+    <% elsif user_email.primary_markable? %>
+      <%= link_to Spree.t(:mark_primary), mark_primary_user_email_path(user_email), remote: true, class: "btn btn-xs btn-default" %>
+    <% else %>
+      <%= Spree.t(:please_verify_first) %>
+    <% end %>
+  </td>
+  <% if Spree::Auth::Config[:confirmable] %>
+    <td class="text-center">
+      <% if user_email.confirmed? %>
+        <%= Spree.t(:verified) %>
+      <% else %>
+        <%= Spree.t(:Unverified) %>. <%= link_to Spree.t(:resend), resend_confirmation_user_email_path(user_email), remote: true %>
+      <% end %>
+    </td>
+  <% end %>
+  <td class="text-center">
+    <%= link_to Spree.t(:edit), edit_user_email_path(user_email), data: { remote: true }, class: "btn btn-xs btn-default" if can? :edit, user_email  %>
+    <%= link_to Spree.t(:remove), user_email, method: :delete, data: { remote: true }, class: "btn btn-xs btn-danger" if can? :destroy, user_email %>
+  </td>
+</tr>

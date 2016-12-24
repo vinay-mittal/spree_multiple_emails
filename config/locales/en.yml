@@ -3,3 +3,20 @@
 
 en:
   hello: "Hello world"
+  spree:
+    user_emails:
+      create:
+        success: "Email has been successfully saved. Please verify using email sent."
+      update:
+        success: "Email has been successfully saved."
+      destroy:
+        success: "Email has been successfully destroyed."
+        error: "There was a failure in failure destroying this email."
+      confirm:
+        success: "%{email} is verified."
+        error: "There was some problem in verification of %{email}."
+      mark_primary:
+        success: "Your email %{email} is marked primary now."
+        error: "There was some problem in verification of %{email}."
+      resend_confirmation:
+        success: "Verification Mail to %{email} has been sent."

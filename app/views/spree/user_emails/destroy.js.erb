@@ -1,0 +1,4 @@
+<% if @user_email.destroyed? %>
+  $("[data-id='<%= @user_email.id %>']").remove();
+<% end %>
+<%= render partial: "spree/shared/flash_message" %>

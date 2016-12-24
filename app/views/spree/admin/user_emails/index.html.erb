@@ -1,0 +1,40 @@
+<% content_for :page_title do %>
+  <%= link_to Spree.t(:users), admin_users_path %> / <%= link_to @user.email, edit_admin_user_url(@user) %> / Emails
+<% end %>
+
+<%= render partial: 'spree/admin/users/sidebar', locals: { current: :emails } %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_user_email), new_object_url, icon: 'add', class: 'btn-success' %>
+<% end %>
+
+<% if @user_emails.present? %>
+  <table class="table">
+    <thead>
+      <th><%= Spree.t(:email) %></th>
+      <% if Spree::Auth::Config[:confirmable] %>
+        <th><%= Spree.t(:verified) %></th>
+      <% end %>
+      <th></th>
+    </thead>
+    <tbody>
+      <% @user_emails.each do |user_email| %>
+        <tr>
+          <td><%= user_email.email %> <span class="label label-success"><%= Spree.t(:primary) if user_email.primary? %></span></td>
+          <% if Spree::Auth::Config[:confirmable] %>
+            <td><%= user_email.confirmed? %></td>
+          <% end %>
+          <td class="actions actions-2 text-right">
+            <%= link_to_edit user_email, no_text: true if can? :edit, user_email %>
+            <%= link_to_delete user_email, no_text: true if can? :destroy, user_email %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="alert alert-info no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::UserEmail)) %>,
+    <%= link_to Spree.t(:add_one), new_object_url %>!
+  </div>
+<% end %>
