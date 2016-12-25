@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_multiple_emails'
   s.version     = '3.0.7'
-  s.summary     = 'Add gem summary here'
-  s.description = 'Add (optional) gem description here'
+  s.summary     = 'User can have multiple emails.'
+  s.description = 'User can have multiple emails. But primary email will only be one.'
   s.required_ruby_version = '>= 2.0.0'
 
   s.author    = 'Vinay Mittal'
@@ -28,4 +28,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'shoulda-matchers'
+  s.add_development_dependency 'shoulda-callback-matchers'
 end

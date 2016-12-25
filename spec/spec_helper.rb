@@ -6,7 +6,6 @@ SimpleCov.start do
   add_group 'Helpers', 'app/helpers'
   add_group 'Mailers', 'app/mailers'
   add_group 'Models', 'app/models'
-  add_group 'Views', 'app/views'
   add_group 'Libraries', 'lib'
 end
 
@@ -18,6 +17,8 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'database_cleaner'
 require 'ffaker'
+require 'shoulda-matchers'
+require 'shoulda-callback-matchers'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -29,6 +30,7 @@ require 'spree/testing_support/capybara_ext'
 require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
+require 'spree/testing_support/shoulda_matcher_configuration'
 
 # Requires factories defined in lib/spree_multiple_emails/factories.rb
 require 'spree_multiple_emails/factories'
@@ -64,7 +66,7 @@ RSpec.configure do |config|
   config.color = true
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # Capybara javascript drivers require transactional fixtures set to false, and we use DatabaseCleaner
   # to cleanup after each test instead.  Without transactional fixtures set to false the records created

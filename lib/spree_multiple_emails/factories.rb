@@ -1,6 +1,12 @@
 FactoryGirl.define do
-  # Define your Spree extensions Factories within this file to enable applications, and other extensions to use and override them.
-  #
-  # Example adding this to your spec_helper will load these Factories for use:
-  # require 'spree_multiple_emails/factories'
+
+  factory :spree_user_email, class: Spree::UserEmail do
+    email { Faker::Internet.email }
+    association :user, factory: :user
+
+    factory :spree_primary_user_email do
+      primary true
+    end
+  end
+
 end
