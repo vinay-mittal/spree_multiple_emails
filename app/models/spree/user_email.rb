@@ -2,7 +2,7 @@ module Spree
   class UserEmail < Spree::Base
 
     # Associations
-    belongs_to :user, class_name: Spree.user_class
+    belongs_to :user, class_name: Spree.user_class.to_s
 
     # Validations
     validates :user, :email, presence: true
@@ -26,7 +26,7 @@ module Spree
 
     def send_confirmation_instructions
       unless primary?
-        Spree::UserEmailMailer.confirmation_instructions(self).deliver
+        Spree::UserEmailMailer.confirmation_instructions(self).deliver_later
       end
     end
 
