@@ -1,4 +1,4 @@
 addons:
   code_climate:
     repo_token: 98e75a13a1f4bf213be74de1763535b15d823e64660506d879f0bf8ed187baea
-rvm: 2.2.1p85
+rvm: 2.2.1
