@@ -4,6 +4,7 @@ SpreeMultipleEmails
 [![Code Climate](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/badges/gpa.svg)](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails)
 [![Issue Count](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/badges/issue_count.svg)](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails)
 [![Test Coverage](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/badges/coverage.svg)](https://codeclimate.com/github/vinay-mittal/spree_multiple_emails/coverage)
+[![Build Status](https://travis-ci.org/vinay-mittal/spree_multiple_emails.svg?branch=master)](https://travis-ci.org/vinay-mittal/spree_multiple_emails)
 
 This extension allows a user to have multiple emails.
 
