@@ -49,7 +49,7 @@ module Spree
       end
 
       def update_user_email
-        # Now all the user related operations will happend through this email including login.
+        # Now all the user related operations will happen through this email including login.
         user.update(email: email, login: email)
       end
 
