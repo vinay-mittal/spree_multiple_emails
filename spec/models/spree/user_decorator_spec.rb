@@ -25,7 +25,7 @@ RSpec.describe Spree::User, type: :model do
   describe "#update_primary_email" do
     let(:user) { create(:user) }
     let(:primary_user_email) { user.primary_email }
-    let(:email) { Faker::Internet.email }
+    let(:email) { FFaker::Internet.email }
 
     before { user.update(email: email) }
 
