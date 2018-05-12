@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_multiple_emails'
-  s.version     = '3.0.7'
+  s.version     = '3.1.12'
   s.summary     = 'User can have multiple emails.'
   s.description = 'User can have multiple emails. But primary email will only be one.'
   s.required_ruby_version = '>= 2.0.0'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.0.7'
+  s.add_dependency 'spree_core', '~> 3.1.0'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'
